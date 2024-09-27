@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaCut, FaCogs, FaHandScissors, FaWrench } from 'react-icons/fa';
 import {
   MdBuild,
@@ -15,17 +16,11 @@ const iconComponents = {
   MdDesignServices,
 };
 
-import PropTypes from 'prop-types';
-
 const ServicesComponent = ({ services }) => {
-  ServicesComponent.propTypes = {
-    services: PropTypes.array.isRequired,
-  };
-
   return (
     <div className="container mx-auto px-4 py-12">
       {services.map((service, index) => {
-        const IconComponent = iconComponents[service.icon.name];
+        const IconComponent = iconComponents[service.icon.name] || FaCut; // Fallback to FaCut if icon not found
         return (
           <div
             key={index}
