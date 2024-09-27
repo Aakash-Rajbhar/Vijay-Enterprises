@@ -4,7 +4,7 @@ import {
   MdDesignServices,
   MdPrecisionManufacturing,
 } from 'react-icons/md'; // Material Design icons
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import TestimonialSection from '../components/Testimonials';
 import ServicesComponent from '../components/ServicesComponent';
 
@@ -151,10 +151,10 @@ const ServicesPage = () => {
 };
 
 ServiceCard.propTypes = {
-  Icon: propTypes.func.isRequired,
-  title: propTypes.string,
-  description: propTypes.string,
-  image: propTypes.string,
+  Icon: PropTypes.element,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default ServicesPage;
