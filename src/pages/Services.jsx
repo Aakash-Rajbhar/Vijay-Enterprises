@@ -5,7 +5,7 @@ import {
   MdPrecisionManufacturing,
 } from 'react-icons/md'; // Material Design icons
 import PropTypes from 'prop-types';
-import TestimonialSection from '../components/Testimonials';
+import Testimonials from '../components/Testimonials';
 import ServicesComponent from '../components/ServicesComponent';
 
 const services = [
@@ -145,7 +145,7 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      <TestimonialSection />
+      <Testimonials />
     </div>
   );
 };
