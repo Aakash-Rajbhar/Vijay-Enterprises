@@ -151,7 +151,7 @@ const ServicesPage = () => {
 };
 
 ServiceCard.propTypes = {
-  Icon: propTypes.string,
+  Icon: propTypes.func.isRequired,
   title: propTypes.string,
   description: propTypes.string,
   image: propTypes.string,
