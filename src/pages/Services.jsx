@@ -4,7 +4,6 @@ import {
   MdDesignServices,
   MdPrecisionManufacturing,
 } from 'react-icons/md'; // Material Design icons
-import PropTypes from 'prop-types';
 import Testimonials from '../components/Testimonials';
 import ServicesComponent from '../components/ServicesComponent';
 
@@ -67,22 +66,6 @@ const services = [
   },
 ];
 
-const ServiceCard = ({ Icon, title, description, image }) => (
-  <div className="bg-slate-50 rounded-lg shadow-md overflow-hidden">
-    <img src={image} alt={title} className="w-full h-40 object-cover mb-4" />
-    <div className="p-4">
-      <div className="flex gap-2 items-start">
-        <Icon className="text-[#11999e] text-3xl mb-4" /> {/* Icon */}
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <a href="#" className=" font-semibold  text-gray-600 ">
-        Read More →
-      </a>
-    </div>
-  </div>
-);
-
 const ServicesPage = () => {
   return (
     <div className=" mt-[82px] md:mt-[92px] min-h-screen">
@@ -91,7 +74,7 @@ const ServicesPage = () => {
         className="relative h-80 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://plus.unsplash.com/premium_photo-1664297472243-fe49b7730ccf?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            "url('https://images.pexels.com/photos/280014/pexels-photo-280014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -99,28 +82,13 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      {/* Services Grid */}
-      {/* <div className="container mx-auto py-16 px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              Icon={service.icon}
-              title={service.name}
-              description={service.description}
-              image={service.image}
-            />
-          ))}
-        </div>
-      </div> */}
-
-      <div className='className="container mx-auto py-16 px-8"'>
+      <div className='className="container max-w-6xl mx-auto py-16 px-8"'>
         <ServicesComponent services={services} />
       </div>
 
       {/* Call to Action Section */}
       <div className="bg-[#111] text-white py-16">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+        <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h2 className="text-3xl font-bold mb-4">
               We Provide Truly Prominent Manufacturing Solutions.
@@ -148,13 +116,6 @@ const ServicesPage = () => {
       <Testimonials />
     </div>
   );
-};
-
-ServiceCard.propTypes = {
-  Icon: PropTypes.element,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
 };
 
 export default ServicesPage;
