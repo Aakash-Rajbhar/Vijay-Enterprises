@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
           >
             {/* Product Image */}
             <img
-              src={item.image}
+              src={item.additionalImages[0]}
               alt={item.name}
               className="w-full h-48 md:h-[250px] object-cover"
             />

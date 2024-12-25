@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 py-8 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-36 mb-8 place-items-center">
           {/* Logo and Company Name */}
           <div className="flex items-center">
             <img width={180} height={90} src={logo} alt="logo" />

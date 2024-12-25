@@ -1,10 +1,10 @@
-import React from 'react';
 import { FaCut, FaCogs, FaHandScissors, FaWrench } from 'react-icons/fa';
 import {
   MdBuild,
   MdPrecisionManufacturing,
   MdDesignServices,
 } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 const iconComponents = {
   FaCut,
@@ -55,6 +55,18 @@ const ServicesComponent = ({ services }) => {
       })}
     </div>
   );
+};
+ServicesComponent.propTypes = {
+  services: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ServicesComponent;

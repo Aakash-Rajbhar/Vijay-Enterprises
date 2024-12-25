@@ -1,11 +1,12 @@
 import { cn } from '../../lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import PropTypes from 'prop-types';
 
 export const HoverEffect = ({ items, className }) => {
   HoverEffect.propTypes = {
-    items: PropTypes.object.isRequired,
+    items: PropTypes.array.isRequired, // Changed from object to array for items
     className: PropTypes.string,
   };
 
@@ -19,9 +20,9 @@ export const HoverEffect = ({ items, className }) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          key={item?.link}
+        <Link
+          to={`/products/${item.id}`} // Dynamic link to the dedicated product page
+          key={item.id} // Use unique key based on item ID
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -44,12 +45,21 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
           <Card>
-            {/* Pass the correct src and alt props to CardImage */}
             <CardImage src={item.image} alt={item.name} />
             <CardTitle>{item.name}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription>
+              <p className="text-gray-600 text-sm mt-2">
+                {item.description.slice(0, 100)}...
+              </p>
+              <a
+                href={item.link}
+                className="text-blue-600 hover:underline mt-4 block"
+              >
+                Read More
+              </a>
+            </CardDescription>
           </Card>
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -74,7 +84,6 @@ export const Card = ({ className, children }) => {
   );
 };
 
-// CardImage now expects src and alt props for proper image rendering
 export const CardImage = ({ src, alt, className }) => {
   CardImage.propTypes = {
     src: PropTypes.string.isRequired,
