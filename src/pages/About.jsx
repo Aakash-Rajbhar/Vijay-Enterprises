@@ -10,7 +10,7 @@ const About = () => {
   });
 
   return (
-    <div className="font-sans mt-[82px] lg:mt-[92px] ">
+    <div className="font-sans ">
       {/* Header Image */}
       <div className="relative h-64 bg-gray-800 overflow-hidden">
         <img

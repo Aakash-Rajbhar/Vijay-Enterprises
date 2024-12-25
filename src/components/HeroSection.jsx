@@ -31,9 +31,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden z-0">
+    <div className="relative mt-0 w-full overflow-hidden z-0">
       {/* Aspect Ratio Container */}
-      <div className="relative w-full h-[65vh] lg:h-[60vh] z-0">
+      <div className="relative w-full h-[65vh] lg:h-[65vh] z-0">
         {' '}
         {/* Adjust height as needed */}
         <video

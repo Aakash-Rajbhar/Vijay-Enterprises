@@ -68,7 +68,7 @@ const services = [
 
 const ServicesPage = () => {
   return (
-    <div className=" mt-[82px] md:mt-[92px] min-h-screen">
+    <div className="  min-h-screen">
       {/* Hero Section */}
       <div
         className="relative h-80 bg-cover bg-center"

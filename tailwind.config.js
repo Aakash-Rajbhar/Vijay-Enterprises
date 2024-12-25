@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import defaultTheme from 'tailwindcss/defaultTheme';
-import colors from 'tailwindcss/colors';
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 
 function addVariablesForColors({ addBase, theme }) {

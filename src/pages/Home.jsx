@@ -14,7 +14,7 @@ const Home = () => {
   ];
 
   return (
-    <section className="w-screen mt-[82px] md:mt-[92px]">
+    <section className="w-screen ">
       <HeroSection />
 
       <div className="bg-[#f1f1f1] py-8 px-4 sm:py-12 md:py-24">

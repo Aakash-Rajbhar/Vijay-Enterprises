@@ -1,6 +1,6 @@
 const ContactPage = () => {
   return (
-    <div className=" mt-[82px] lg:mt-[92px]">
+    <div>
       <div className="relative h-64 bg-gray-800 flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <img

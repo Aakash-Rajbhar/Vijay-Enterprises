@@ -5,7 +5,7 @@ import { products } from '../data/products';
 
 const Products = () => {
   return (
-    <div className="min-h-screen  bg-gray-100 mt-[82px] lg:mt-[92px]">
+    <div className="min-h-screen  bg-gray-100 ">
       <header className="relative bg-gradient-to-b from-black to-slate-300 text-white py-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-80"

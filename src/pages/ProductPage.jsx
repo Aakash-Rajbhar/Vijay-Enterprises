@@ -22,7 +22,7 @@ const ProductDisplay = () => {
   console.log('Selected Image: ', selectedImage); // Log the selected image index
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 mt-[82px] lg:mt-[92px]">
+    <div className="max-w-7xl mx-auto px-4 py-8 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Product Images Section */}
         <div className="space-y-4">
