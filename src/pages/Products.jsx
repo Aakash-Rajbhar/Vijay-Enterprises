@@ -16,7 +16,7 @@ const Products = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black to-[#222] opacity-90"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Our Products and Services
+            Our Products
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
             Sheet Metal Works, Fabrication, Laser Cutting, and More

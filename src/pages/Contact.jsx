@@ -1,3 +1,5 @@
+import { Button } from '../components/ui/moving-border';
+
 const ContactPage = () => {
   return (
     <div>
@@ -8,7 +10,7 @@ const ContactPage = () => {
             alt=" sparks"
             className="w-full h-full object-cover "
           />
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0  bg-gradient-to-t from-black/95 to-black-10"></div>
         </div>
         <h1 className="text-4xl font-bold text-white z-10">Reach Out To Us</h1>
       </div>
@@ -46,9 +48,12 @@ const ContactPage = () => {
               placeholder="Message"
               className="w-full border border-gray-300 p-3 rounded outline-[#11999e]"
             ></textarea>
-            <button className="w-full bg-blue-600 text-white p-3 rounded">
-              Send message
-            </button>
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white hover:bg-neutral-800 text-neutral-800 hover:text-neutral-100  border-neutral-200 transition-all 300ms ease-in"
+            >
+              Send Message
+            </Button>
           </form>
         </div>
 

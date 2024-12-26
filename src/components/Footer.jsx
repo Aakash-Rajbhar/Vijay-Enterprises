@@ -1,5 +1,11 @@
-import { Facebook, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 import logo from '../assets/logo.svg';
+import {
+  FiFacebook,
+  FiInstagram,
+  FiLinkedin,
+  FiTwitter,
+  FiYoutube,
+} from 'react-icons/fi';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -7,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 py-8 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-36 mb-8 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-36 mb-8 ">
           {/* Logo and Company Name */}
           <div className="flex items-center">
             <img width={180} height={90} src={logo} alt="logo" />
@@ -71,11 +77,11 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex space-x-4">
-            <Facebook size={20} />
-            <Instagram size={20} />
-            <Twitter size={20} />
-            <Linkedin size={20} />
-            <Youtube size={20} />
+            <FiFacebook size={20} />
+            <FiInstagram size={20} />
+            <FiTwitter size={20} />
+            <FiLinkedin size={20} />
+            <FiYoutube size={20} />
           </div>
         </div>
       </div>

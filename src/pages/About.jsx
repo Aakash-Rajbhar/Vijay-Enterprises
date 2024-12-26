@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import WorkFLow from '../components/WorkFLow';
 import aboutBg from '../assets/about-bg.jpg';
+import { StickyScrollRevealDemo } from '../components/StickyScrollRevealDemo';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -43,7 +44,7 @@ const About = () => {
         </p>
 
         {/* Timeline Sections */}
-        <div className="space-y-8">
+        {/* <div className="space-y-8">
           {['Past', 'Present', 'Future'].map((period, index) => {
             // eslint-disable-next-line react-hooks/rules-of-hooks
             const { ref, inView } = useInView({
@@ -91,7 +92,9 @@ const About = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
+
+        <StickyScrollRevealDemo />
       </div>
 
       <section className="max-w-6xl px-8 lg:px-0 mx-auto flex flex-col md:flex-row justify-between items-center gap-4 py-16">

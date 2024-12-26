@@ -6,25 +6,25 @@ const WorkFlow = () => {
       id: 1,
       title: 'STEP 1',
       subtitle: 'Project Planning & Scheduling',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat deserunt quod eius reprehenderit, unde distinctio atque tempora accusantium ullam.',
+      desc: 'We begin by understanding your project requirements, setting clear objectives, and developing a detailed timeline. This stage ensures smooth execution and alignment with your expectations.',
     },
     {
       id: 2,
       title: 'STEP 2',
       subtitle: 'Material Preparation',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat deserunt quod eius reprehenderit, unde distinctio atque tempora accusantium ullam.',
+      desc: 'The required sheet metal and other materials are selected and prepared. This involves cutting, cleaning, and ensuring the materials meet the specifications for the project.',
     },
     {
       id: 3,
       title: 'STEP 3',
       subtitle: 'Design & Manufacturing',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat deserunt quod eius reprehenderit, unde distinctio atque tempora accusantium ullam.',
+      desc: 'Using advanced CAD software and precision machinery, we create accurate designs and fabricate high-quality components tailored to your needs.',
     },
     {
       id: 4,
       title: 'STEP 4',
       subtitle: 'Assembly & Inspection',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit placeat deserunt quod eius reprehenderit, unde distinctio atque tempora accusantium ullam.',
+      desc: 'Once manufacturing is complete, the components are assembled and inspected for quality assurance. Rigorous testing ensures the final product meets all specifications and standards.',
     },
   ];
 
@@ -36,6 +36,7 @@ const WorkFlow = () => {
       <div className="relative w-full lg:w-2/3">
         {/* Render the workflow steps */}
         {steps.map((step, index) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
           const { ref, inView } = useInView({
             threshold: 0.1,
             triggerOnce: true,
@@ -52,7 +53,7 @@ const WorkFlow = () => {
             >
               <div
                 ref={ref}
-                className={`w-10/12 sm:w-1/2 p-4 bg-white shadow-lg  rounded-sm z-10 transform transition-all duration-500 ease-in-out text-center lg:text-left ${
+                className={`w-10/12 sm:w-1/2 p-4 bg-neutral-300 text-black shadow-lg  rounded-xl z-10 transform transition-all duration-500 ease-in-out text-center lg:text-left ${
                   index % 2 === 0 ? 'sm:ml-6' : 'sm:mr-6'
                 } ${
                   inView
@@ -66,9 +67,7 @@ const WorkFlow = () => {
                 <span className="font-semibold text-center  lg:text-left">
                   {step.subtitle}
                 </span>
-                <p className="text-xs text-justify py-4 text-gray-600">
-                  {step.desc}
-                </p>
+                <p className="text-xs text-justify py-4">{step.desc}</p>
               </div>
             </div>
           );

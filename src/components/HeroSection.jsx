@@ -47,10 +47,10 @@ const HeroSection = () => {
       </div>
 
       {/* Black Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/95 to-black/45 "></div>
 
       {/* Heading Text */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] text-center text-white px-4 py-8">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[85%] text-center text-white px-4 py-8">
         <TextGenerateEffect
           words={'Transforming Metal into Precision Parts and Panels'}
         />

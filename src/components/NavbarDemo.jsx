@@ -1,20 +1,17 @@
-import { User } from 'lucide-react';
+import { CircleHelp, UserRoundCog } from 'lucide-react';
 import { FloatingNav } from './ui/floating-navbar';
-import { MdMiscellaneousServices } from 'react-icons/md';
 import { AiOutlineProduct } from 'react-icons/ai';
 export function NavbarDemo() {
   const navItems = [
     {
       name: 'About',
       link: '/about',
-      icon: <User className="h-6 w-6 mr-2 text-neutral-500 " />,
+      icon: <CircleHelp className="h-6 w-6 mr-2 text-neutral-500 " />,
     },
     {
       name: 'Services',
       link: '/services',
-      icon: (
-        <MdMiscellaneousServices className="h-6 w-6 mr-2 text-neutral-500" />
-      ),
+      icon: <UserRoundCog className="h-6 w-6 mr-2 text-neutral-500" />,
     },
     {
       name: 'Products',
