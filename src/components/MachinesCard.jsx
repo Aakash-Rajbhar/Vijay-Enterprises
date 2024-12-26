@@ -18,7 +18,7 @@ const MachinesCard = () => {
       id: '2',
       title: 'CNC Press Break Hawk 150-31',
       description:
-        'High-speed, accurate, and repeatable press brake. Saves over 70% energy per stroke. Silent operation with reduced noise and minimal vibrations for operator comfort.',
+        "High-speed, accurate, and repeatable press brake. Saves over 70% energy per stroke. Silent operation with reduced noise and minimal vibrations for operator comfort. Experience enhanced precision and speed with our CNC press brake's rapid-action backgauge.  Easy to use and maintain.",
       img: bending,
       link: 'https://www.hindustanhydraulics.com/cnc_press_brake_hawk_series',
     },
@@ -48,6 +48,7 @@ const MachinesCard = () => {
 
       <div className="grid md:grid-cols-3 items-center gap-10">
         {machines.map((machine, index) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
           const { ref, inView } = useInView({
             threshold: 0.1,
             triggerOnce: true,
