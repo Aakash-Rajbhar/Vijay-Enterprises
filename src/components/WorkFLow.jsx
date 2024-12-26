@@ -53,7 +53,7 @@ const WorkFlow = () => {
             >
               <div
                 ref={ref}
-                className={`w-10/12 sm:w-1/2 p-4 bg-neutral-300 text-black shadow-lg  rounded-xl z-10 transform transition-all duration-500 ease-in-out text-center lg:text-left ${
+                className={`w-10/12 sm:w-1/2 p-4 bg-neutral-200 text-neutral-900 shadow-lg  rounded-xl z-10 transform transition-all duration-500 ease-in-out text-center lg:text-left ${
                   index % 2 === 0 ? 'sm:ml-6' : 'sm:mr-6'
                 } ${
                   inView

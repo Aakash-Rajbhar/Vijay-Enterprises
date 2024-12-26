@@ -43,7 +43,7 @@ export const FloatingNav = ({ navItems, className }) => {
           duration: 0.5,
         }}
         className={cn(
-          'flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-neutral-500/[0.2] rounded-full bg-white/80 backdrop-blur-md shadow-xl z-[5000] pr-4 md:pr-6 pl-8 py-3 items-center justify-center space-x-4',
+          'flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-neutral-500/[0.2] rounded-2xl bg-white/80 backdrop-blur-md shadow-xl z-[5000] pr-4 md:pr-6 pl-8 py-3 items-center justify-center space-x-4',
           className
         )}
       >

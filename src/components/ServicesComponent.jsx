@@ -5,6 +5,7 @@ import {
   MdDesignServices,
 } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import { useInView } from 'react-intersection-observer';
 
 const iconComponents = {
   FaCut,
@@ -20,6 +21,12 @@ const ServicesComponent = ({ services }) => {
   return (
     <div className="container mx-auto px-4 py-12">
       {services.map((service, index) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const [ref, inView] = useInView({
+          threshold: 0.1,
+          delay: 500,
+          triggerOnce: true,
+        });
         const IconComponent = iconComponents[service.icon.name] || FaCut; // Fallback to FaCut if icon not found
         return (
           <div
@@ -27,9 +34,16 @@ const ServicesComponent = ({ services }) => {
             className="flex flex-col md:flex-row items-center mb-32"
           >
             <div
+              ref={ref}
               className={`w-full md:w-1/2 ${
                 index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:order-2'
-              }`}
+              } ${
+                inView
+                  ? 'translate-x-0 opacity-100'
+                  : index % 2 === 0
+                  ? '-translate-x-10 opacity-0'
+                  : 'translate-x-10 opacity-0'
+              } transition-all duration-1000 ease-in-out`}
             >
               <img
                 src={service.image}
@@ -38,9 +52,16 @@ const ServicesComponent = ({ services }) => {
               />
             </div>
             <div
+              ref={ref}
               className={`w-full md:w-1/2 mt-8 md:mt-0 ${
                 index % 2 === 0 ? '' : 'md:order-1'
-              }`}
+              } ${
+                inView
+                  ? 'translate-x-0 opacity-100'
+                  : index % 2 === 0
+                  ? 'translate-x-10 opacity-0'
+                  : '-translate-x-10 opacity-0'
+              } transition-all duration-1000 ease-in-out`}
             >
               <div className="flex items-center mb-4">
                 <IconComponent className="text-4xl text-blue-600 mr-4" />
